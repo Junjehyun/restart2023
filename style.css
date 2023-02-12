@@ -1,0 +1,99 @@
+body {
+    /* window의 전 영역을 차지하는 body 부분의 margin을 0으로 함으로써 떨어져 있는 부분을 없앰.  한마디로 붙여버림.*/
+    margin: 0;
+    /* body의 전체 배경색깔 */
+    background-color: whitesmoke;
+    /* 구글폰트 적용 */
+    font-family: 'Gowun Batang', serif;
+}
+
+a {
+    /* 링크밑줄 없애기 */
+    text-decoration: none;
+    /* 텍스트 컬러 */
+    color: rgb(156, 73, 101);
+}
+
+.navbar {
+    /* display: flex를 이용해 세로로 있던 박스들을 가로로 옮겨놓는다. */
+    display: flex;
+    /* justify-content: space-between; 을 이용해 박스들 사이에 빈 공간을 넣어준다. */
+    justify-content: space-between;
+    /* align-items: center; 는 navbar에 있는 박스들을 navbar 내에서 가운데 정렬한다. */
+    align-items: center;
+    /* 배경화면 색깔 */
+    background-color: pink;
+    /* navbar에 공백은 위아래로 8px, 양 옆으로 12px을 넣어 끝에 바짝 붙는 것을 방지한다. */
+    padding: 8px 12px;
+}
+
+.navbar_menu {
+    /* li태그 앞에 붙는 구분점을 없앰. */
+    list-style: none;
+    /* 세로로 되어 있는 아이템들을 가로로 위치를 변경 */
+    display: flex;
+    /* margin 과 padding-left를 0으로 정해 공백이 생기는 것을 없애줌. */
+    margin: 0;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    /* <li> 태그에 공간을 주기 위해 padding 을 추가 */
+    padding: 8px 30px;
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 넓이 100% */
+    width: 100%;
+  }
+
+/* li:hover 부분은 마우스 커서가 위에 올라왔을 때의 동작 변화를 표현할 수 있도록 함. */
+  .navbar_menu li:hover {
+    background-color: tomato;
+    /* border-radius는 마우스오버시 버튼의 모서리가 둥글게 될 수 있도록 함. */
+    border-radius: 3px;
+  }
+
+  .navbar_toggleBtn {
+    /* 상위박스인 navbar안에서만 움직인다. */
+    position: absolute;
+    /* 즉 navbar 내에서 움직이는데, 이동하는 곳이 우측에서 15px떨어진 곳 이라는 의미 */
+    right: 15px;
+    /* 햄버거 버튼 사이즈 */
+    font-size: 20px;
+    /* 숨기기 기능 (밑에 media 700이하의 창일때만 뜨게 할것이기 때문이다. */
+    display: none;
+  }
+
+/* @media를 사용해 반응형으로 바꿔준다. 아래 코드의 의미는 screen의 너비가 최대 크기 700px 까지는 { } 안에 있는 css 코드를 사용한다는 의미 */
+@media screen and (max-width:700px) {
+    .navbar {
+      /* olumn; 은 navbar 박스 내부의 박스들을 column 형태로 정렬 */
+      flex-direction: column;
+      /* 내부박스들을 왼쪽에서부터 시작 */
+      align-items: flex-start;
+      /* 마진을 0으로 두어 공백이 안생기게 한다. */
+      margin: 0;
+    }
+
+    .navbar_menu {
+      /* 메뉴항목 숨기기 */
+      display: none;
+      /* main axis가 열 모양으로 변경 됨*/
+      flex-direction: column;
+      /* 박스 내의 아이템들이 가운데로 정렬됨. */
+      align-items: center;
+      /* 너비 100%로 설정 -> 그럼 가운데로 정렬됨. 그 전에는 박스 공간이 협소해서 움직이질 않음. */
+      width:100%;
+    }
+
+    .navbar_toggleBtn {
+      /* Media밖에서는 숨기기 기능을 했으나, 700px이하일때는 다시  보이도록 설정한다. */
+      display: block;
+    }
+
+    /* 디스플레이 flex를 통해 활성화 시켜주면 js를 읽어들여 
+    햄버거를 클릭할 시 메뉴들이 활성화 된다. */
+    .navbar_menu.active {
+      display: flex;
+    }
+}
