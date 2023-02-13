@@ -14,15 +14,22 @@ git config --global user.email 'h94051987@gmail.com'
 
 끝나면 
 
-git add . -> 전부를 추가 하겠다는 의미
+git add . -> 전부를 추가 하겠다는 의미 (업데이트할때도 이거로 하면된다.)
 
 *html파일 하나만 올리고싶다면 git add index.html 이런식으로 올린다.
 
-git commit -m "first commit" -> 히스토리 first commit은 이름
+git commit -m "first commit" -> 히스토리 first commit은 이름 (두번째면 세컨, 세번째면 써드 등등..)
 
 git config --global --list -> 입력한 정보 맞는지 확인 
 
 git push origin master -> 직접 업로드 명령어 (마스터 브랜치로 보낸다.)
 
 git status ->  업로드한 깃의 버전을 확인 할 수 있다. 
+
+
+※업데이트 할때는 그냥 
+
+git add . -> git status (뭐가 업데이트됐는지 상태확인) -> git commit -m "ooo commit" (몇번째 업뎃)
+
+-> 마지막으로 git push orgin master로 업로드 싹 해준다.
 
