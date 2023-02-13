@@ -1,8 +1,9 @@
+
 body {
     /* window의 전 영역을 차지하는 body 부분의 margin을 0으로 함으로써 떨어져 있는 부분을 없앰.  한마디로 붙여버림.*/
     margin: 0;
     /* body의 전체 배경색깔 */
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     /* 구글폰트 적용 */
     font-family: 'Gowun Batang', serif;
 }
@@ -11,7 +12,7 @@ a {
     /* 링크밑줄 없애기 */
     text-decoration: none;
     /* 텍스트 컬러 */
-    color: rgb(156, 73, 101);
+    color: #E9E4F0;
 }
 
 .navbar {
@@ -22,7 +23,7 @@ a {
     /* align-items: center; 는 navbar에 있는 박스들을 navbar 내에서 가운데 정렬한다. */
     align-items: center;
     /* 배경화면 색깔 */
-    background-color: pink;
+    background: linear-gradient(to left, #833ab4, #fd1d1d, #fcb045);
     /* navbar에 공백은 위아래로 8px, 양 옆으로 12px을 넣어 끝에 바짝 붙는 것을 방지한다. */
     padding: 8px 12px;
 }
@@ -96,4 +97,14 @@ a {
     .navbar_menu.active {
       display: flex;
     }
+}
+/* Header부분 꾸며보자 */
+#header {
+  /* padding은 요소의 내용과 바깥 여백을 구분하는 개념이다. 상하좌우 각각의 값을 지정*/
+  padding: 40px;
+  /* html요소의 위쪽 여백 조정 픽셀을 높게 조정할수록 윗단과 멀어진다. 50px은 상단 경계로부터 50 픽셀 떨어져 위치 */
+  padding-top: 50px;
+  /* 텍스트랑 이미지 .. 즉 내용물을 가운데로 정렬 */
+  text-align: center;
+  background: linear-gradient(to left, #d9a7c7, #fffcdc);
 }
