@@ -53,6 +53,7 @@ a {
     /* border-radius는 마우스오버시 버튼의 모서리가 둥글게 될 수 있도록 함. */
     border-radius: 3px;
   }
+/* 2月13日ここまで */
 
   .navbar_toggleBtn {
     /* 상위박스인 navbar안에서만 움직인다. */
@@ -107,4 +108,33 @@ a {
   /* 텍스트랑 이미지 .. 즉 내용물을 가운데로 정렬 */
   text-align: center;
   background: linear-gradient(to left, #d9a7c7, #fffcdc);
+}
+
+#about {
+  background: linear-gradient(to right, #dae2f8, #d6a4a4);
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.about_majors {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+  
+}
+
+.major_icon {
+  width: 700px;
+  height: 50px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
