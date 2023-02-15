@@ -6,6 +6,8 @@ body {
     /* background-color: whitesmoke; */
     /* 구글폰트 적용 */
     font-family: 'Gowun Batang', serif;
+    /* body태그 전체 폰트 컬러 */
+    color: #274046;
 }
 
 a {
@@ -110,24 +112,7 @@ a {
   background: linear-gradient(to left, #d9a7c7, #fffcdc);
 }
 
-#about {
-  background: linear-gradient(to right, #dae2f8, #d6a4a4);
-}
-
-.section {
-  padding: 50px;
-  text-align: center;
-  margin: auto;
-}
-
-.about_majors {
-  display: flex;
-  justify-content: center;
-  margin: 80px 0;
-  
-}
-
-.major_icon {
+.lang_icon {
   width: 700px;
   height: 50px;
   line-height: 170px;
@@ -137,4 +122,28 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  padding-top: 50px;
 }
+
+/* footer부분 */
+#contact {
+  background: linear-gradient(to right, #b993d6, #8ca6db);
+}
+
+.contact_title,
+.contact_email,
+.contact_rights,
+.contact_tel {
+  color: #274046;
+}
+
+.contact_email,
+.contact_tel {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact_title {
+  margin: 32px 0;
+}
+
