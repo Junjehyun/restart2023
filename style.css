@@ -1,3 +1,6 @@
+:root {
+  --animation-duration: 0.3s;
+}
 
 body {
     /* window의 전 영역을 차지하는 body 부분의 margin을 0으로 함으로써 떨어져 있는 부분을 없앰.  한마디로 붙여버림.*/
@@ -125,12 +128,15 @@ a {
   padding-top: 50px;
 }
 
+
+
 /* footer부분 */
 #contact {
   background: linear-gradient(to right, #b993d6, #8ca6db);
   display: flex;  
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
 .contact_title,
