@@ -1,3 +1,7 @@
+// strict mode는 JavaScript 코드를 더 엄격한 구문 분석과 실행으로 강제하여, 
+// 예기치 않은 동작을 방지하고 보안성을 높이는 데 도움을 준다.
+'use strict';
+
 // html에서 .navbar_toggleBtn클래스와 .navbar_menu 클래스를 가진 요소를 찾고, toggleBtn변수에 할당 하는 내용이다.
 
 // document.querySelector('.navbar_toggleBtn')을 호출하여 HTML 문서에서 클래스 이름이 navbar_toggleBtn인 첫 번째 요소를 찾습니다. 

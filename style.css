@@ -128,6 +128,9 @@ a {
 /* footer부분 */
 #contact {
   background: linear-gradient(to right, #b993d6, #8ca6db);
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact_title,
@@ -145,5 +148,9 @@ a {
 
 .contact_title {
   margin: 32px 0;
+}
+
+.contact_links {
+  font-size: 60px;
 }
 
