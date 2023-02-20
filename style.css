@@ -11,13 +11,12 @@ body {
     font-family: 'Gowun Batang', serif;
     /* body태그 전체 폰트 컬러 */
     color: #274046;
+    
 }
 
 a {
     /* 링크밑줄 없애기 */
     text-decoration: none;
-    /* 텍스트 컬러 */
-    color: #E9E4F0;
 }
 
 .navbar {
@@ -28,7 +27,7 @@ a {
     /* align-items: center; 는 navbar에 있는 박스들을 navbar 내에서 가운데 정렬한다. */
     align-items: center;
     /* 배경화면 색깔 */
-    background: linear-gradient(to left, #833ab4, #fd1d1d, #fcb045);
+    background: #01fe87;
     /* navbar에 공백은 위아래로 8px, 양 옆으로 12px을 넣어 끝에 바짝 붙는 것을 방지한다. */
     padding: 8px 12px;
 }
@@ -112,7 +111,42 @@ a {
   padding-top: 50px;
   /* 텍스트랑 이미지 .. 즉 내용물을 가운데로 정렬 */
   text-align: center;
-  background: linear-gradient(to left, #d9a7c7, #fffcdc);
+  background: #252839;
+  min-height: 100vh;
+  
+}
+
+h1 {
+  position: relative;
+  font-size: 4vw;
+  color: #252839;
+  -webkit-text-stroke: 0.1vw #383d52;
+  
+}
+
+h1::before {
+  /* content: attr(data-text); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #01fe87;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #01fe87;
+  
+}
+
+@keyframes animate 
+{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  70%,90%
+  {
+    width: 100%;
+  }
 }
 
 .lang_icon {
@@ -126,24 +160,24 @@ a {
   align-items: center;
   margin-bottom: 16px;
   padding-top: 50px;
+  color: #01fe87;
 }
-
-
 
 /* footer부분 */
 #contact {
-  background: linear-gradient(to right, #b993d6, #8ca6db);
+  background: #252839;
   display: flex;  
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  color: #01fe87;
 }
 
 .contact_title,
 .contact_email,
 .contact_rights,
 .contact_tel {
-  color: #274046;
+  color: #01fe87;
 }
 
 .contact_email,
@@ -157,6 +191,7 @@ a {
 }
 
 .contact_links {
-  font-size: 60px;
+  font-size: 40px;
 }
+
 
