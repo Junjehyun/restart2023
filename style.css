@@ -1,22 +1,20 @@
-:root {
-  --animation-duration: 0.3s;
+* {
+  /* window의 전 영역을 차지하는 body 부분의 margin을 0으로 함으로써 떨어져 있는 부분을 없앰.  한마디로 다 붙여버림.*/
+  margin: 0;
+   /* 구글폰트 적용 */
+   font-family: 'Poppins', sans-serif;
 }
 
 body {
-    /* window의 전 영역을 차지하는 body 부분의 margin을 0으로 함으로써 떨어져 있는 부분을 없앰.  한마디로 붙여버림.*/
-    margin: 0;
     /* body의 전체 배경색깔 */
-    /* background-color: whitesmoke; */
-    /* 구글폰트 적용 */
-    font-family: 'Gowun Batang', serif;
-    /* body태그 전체 폰트 컬러 */
-    color: #274046;
-    
+    /* background-color: red; */ 
 }
 
 a {
     /* 링크밑줄 없애기 */
     text-decoration: none;
+    /* 텍스트컬러 */
+    color: whitesmoke
 }
 
 .navbar {
@@ -27,7 +25,7 @@ a {
     /* align-items: center; 는 navbar에 있는 박스들을 navbar 내에서 가운데 정렬한다. */
     align-items: center;
     /* 배경화면 색깔 */
-    background: #01fe87;
+    background: #031922;
     /* navbar에 공백은 위아래로 8px, 양 옆으로 12px을 넣어 끝에 바짝 붙는 것을 방지한다. */
     padding: 8px 12px;
 }
@@ -47,17 +45,14 @@ a {
     padding: 8px 30px;
     /* 텍스트 가운데 정렬 */
     text-align: center;
-    /* 넓이 100% */
-    width: 100%;
   }
 
 /* li:hover 부분은 마우스 커서가 위에 올라왔을 때의 동작 변화를 표현할 수 있도록 함. */
   .navbar_menu li:hover {
-    background-color: tomato;
+    background-color: rgb(121, 149, 180);
     /* border-radius는 마우스오버시 버튼의 모서리가 둥글게 될 수 있도록 함. */
-    border-radius: 3px;
+    border-radius: 4px;
   }
-/* 2月13日ここまで */
 
   .navbar_toggleBtn {
     /* 상위박스인 navbar안에서만 움직인다. */
@@ -103,95 +98,72 @@ a {
       display: flex;
     }
 }
-/* Header부분 꾸며보자 */
-#header {
-  /* padding은 요소의 내용과 바깥 여백을 구분하는 개념이다. 상하좌우 각각의 값을 지정*/
-  padding: 40px;
-  /* html요소의 위쪽 여백 조정 픽셀을 높게 조정할수록 윗단과 멀어진다. 50px은 상단 경계로부터 50 픽셀 떨어져 위치 */
-  padding-top: 50px;
-  /* 텍스트랑 이미지 .. 즉 내용물을 가운데로 정렬 */
-  text-align: center;
-  background: #252839;
-  min-height: 100vh;
-  
-}
 
-h1 {
-  position: relative;
-  font-size: 4vw;
-  color: #252839;
-  -webkit-text-stroke: 0.1vw #383d52;
-  
-}
-
-h1::before {
-  /* content: attr(data-text); */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  color: #01fe87;
-  -webkit-text-stroke: 0vw #383d52;
-  border-right: 2px solid #01fe87;
-  
-}
-
-@keyframes animate 
-{
-  0%,10%,100%
-  {
-    width: 0;
-  }
-  70%,90%
-  {
-    width: 100%;
-  }
-}
-
-.lang_icon {
-  width: 700px;
-  height: 50px;
-  line-height: 170px;
-  font-size: 70px;
-  margin: auto;
+.main {
+  /* flex컨테이너 생성 */
   display: flex;
-  justify-content: space-between;
+  /* flex item들 수평으로 세팅 */
+  justify-content: center;
+  /* flex item들 수직으로 세팅 */
   align-items: center;
-  margin-bottom: 16px;
-  padding-top: 50px;
-  color: #01fe87;
+  /* 뷰포트 조정 내용물 중앙배치 */
+  min-height: 100vh;
+  /* 배경컬러 */
+  background: #000;
 }
 
-/* footer부분 */
-#contact {
-  background: #252839;
-  display: flex;  
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  color: #01fe87;
+.content {
+   /* 요소를 일반적인 문서 흐름에 따라 배치하되, 상대적인 위치를 설정하는 CSS 속성 */
+  position: relative;
+
 }
 
-.contact_title,
-.contact_email,
-.contact_rights,
-.contact_tel {
-  color: #01fe87;
+.content h2 {
+  /* 부모요소 content를 기준으로 절대 위치에 배치 */
+    /* h2의 water는 2개이지만, absolute를 적용하면 겹쳐서 보이게 될것이다.
+    즉 두개의 태그가 겹쳐서 1개로 보이게된다. position: absolute 속성으로 인해서 부모요소를 기준으로
+    절대 위치에 배치되기 때문 */
+  position: absolute;
+  /* 요소를 수평 -50%, 수직 -50% 이동 */
+  transform: translate(-50%, -50%);
+  /* 폰트크기 */
+  font-size: 8em;
 }
 
-.contact_email,
-.contact_tel {
-  font-size: 20px;
-  font-weight: 600;
+/*  content자식요소중 첫번째 h2 */
+.content h2:nth-child(1) {
+  /* 글자색을 투명하게 한다. 이렇게 하면 글자는 안보인다 */
+  color:transparent;
+  /* 글자 주변에 2px 두께의 파란색 윤곽선 테두리를 설정. */
+  -webkit-text-stroke: 2px #03a9f4;
+}
+/* content자식요소중 두번째 h2 */
+.content h2:nth-child(2) {
+  /* 글자색 설정 */
+  color: #03a9f4;
+   /* @Keyframes를 활용해 애니메이션 효과를 넣어본다.
+    4s는 한번 재생되는데 걸리는 시간, ease-in-out은 처음과 끝부분이 느리고, 중간부분은 빠르게 움직이는 함수.
+    infinite는 애니메이션이 무한반복 되도록 설정
+    자세한건 @Keyframes에서 세팅 */
+    animation: animate 4s ease-in-out infinite;
 }
 
-.contact_title {
-  margin: 32px 0;
+/* Keyframes는 css에서 애니메이션을 만들 때 사용하는 규칙 중 하나이다.
+animate는 여기서 사용되는 애니메이션 이름이다. 0%와 100%는 애니메이션의 시작과 끝을 의미,
+clip-path속성을 사용해 다각형 클리핑 경로를 정의하고 있다. 이 경로는 다각형 모양의 영역을 만들어내는데 사용된다. */
+@Keyframes animate {
+/* Clippath는 요소를 잘라내는 방법을 지정할수 있음. 요소의 모양을 변경하거나 자름.
+    polygon함수는 clip-path속성에서 사용되며 다각형 모양의 마스크를 만들어줌.
+    polygon은 괄호 안에 x,y 좌표값을 차례대로 나열하여 다각형 모양의 마스크를 만든다. 
+    지금 단계에서는 너무 자세히 알 필요는 없고 차근차근하자*/
+    0%,100%
+    {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%,
+         70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 
+        67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
 }
-
-.contact_links {
-  font-size: 40px;
-}
-
-
